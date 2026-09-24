@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Informasi Jambu Biji</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(180deg, #f4eaff, #fffaf5);
+            color: #333;
+            min-height: 100vh;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+            background:
+                linear-gradient(
+                    135deg,
+                    #fc1086,
+                    #f55db1,
+                    #f884d1
+                );
+
+            color: white;
+            text-align: center;
+            padding: 45px 20px 55px;
+
+            border-radius: 0 0 40px 40px;
+
+            box-shadow:
+                0 8px 25px rgba(71, 29, 95, 0.3);
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 50%;
+            top: -70px;
+            left: -50px;
+        }
+
+        .header::after {
+            content: "";
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            background: rgba(255,255,255,0.07);
+            border-radius: 50%;
+            bottom: -120px;
+            right: -60px;
+        }
+
+        .fruit-icon {
+            font-size: 65px;
+            margin-bottom: 10px;
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 15px;
+            opacity: 0.92;
+        }
+
+
+        /* =========================
+           CONTAINER
+        ========================= */
+
+        .container {
+            max-width: 900px;
+            margin: -30px auto 50px;
+            padding: 0 18px;
+        }
+
+
+        /* =========================
+           IMAGE CARD
+        ========================= */
+
+        .fruit-card {
+            background: white;
+            padding: 15px;
+            border-radius: 28px;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.09);
+
+            margin-bottom: 22px;
+
+            transition: 0.3s;
+        }
+
+        .fruit-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .fruit-image {
+            width: 100%;
+            height: 330px;
+
+            object-fit: cover;
+
+            border-radius: 22px;
+
+            display: block;
+        }
+
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        .section {
+            background: white;
+
+            border-radius: 24px;
+
+            padding: 27px;
+
+            margin-bottom: 20px;
+
+            box-shadow:
+                0 7px 22px rgba(0,0,0,0.06);
+
+            border-left: 6px solid hsl(327, 96%, 68%);
+
+            transition: 0.3s;
+        }
+
+        .section:hover {
+            transform: translateY(-3px);
+        }
+
+        .section h2 {
+            color: #fc4bb2;
+
+            font-size: 23px;
+
+            margin-bottom: 14px;
+        }
+
+        .section p {
+            font-size: 15px;
+
+            line-height: 1.85;
+
+            text-align: justify;
+        }
+
+
+        /* =========================
+           INFORMASI UMUM
+        ========================= */
+
+        .info-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 14px;
+
+            margin-top: 18px;
+        }
+
+        .info-box {
+            background:
+                linear-gradient(
+                    135deg,
+                    #fdc4f8,
+                    #fff8ef
+                );
+
+            padding: 19px;
+
+            border-radius: 18px;
+
+            border: 1px solid #f1d8e2;
+        }
+
+        .info-box strong {
+            display: block;
+
+            color: #fc4bb2;
+
+            margin-bottom: 7px;
+
+            font-size: 15px;
+        }
+
+        .info-box span {
+            font-size: 14px;
+
+            color: #555;
+        }
+
+
+        /* =========================
+           HABITAT
+        ========================= */
+
+        .habitat-box {
+            background:
+                linear-gradient(
+                    135deg,
+                    #edf8e9,
+                    #f9fff6
+                );
+
+            border-radius: 20px;
+
+            padding: 20px;
+
+            border-left: 5px solid #5b9b45;
+        }
+
+        .habitat-box h3 {
+            color: #477c37;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           PENYEBARAN
+        ========================= */
+
+        .distribution {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 12px;
+
+            margin-top: 18px;
+        }
+
+        .region {
+            background: #f6efff;
+
+            border-radius: 16px;
+
+            padding: 16px;
+
+            border: 1px solid #e6d5ed;
+
+            transition: 0.3s;
+        }
+
+        .region:hover {
+            background: #eee0f8;
+
+            transform: scale(1.02);
+        }
+
+        .region strong {
+            color: #9e2d6b;
+
+            display: block;
+
+            margin-bottom: 5px;
+        }
+
+        .region span {
+            font-size: 14px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================
+           SENTRA BUDIDAYA
+        ========================= */
+
+        .sentra {
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 13px;
+
+            margin: 14px 0;
+
+            padding: 14px;
+
+            background: #fff7e9;
+
+            border-radius: 15px;
+        }
+
+        .sentra-icon {
+            min-width: 38px;
+
+            height: 38px;
+
+            border-radius: 50%;
+
+            background: #e49b39;
+
+            color: white;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-size: 18px;
+        }
+
+        .sentra-text {
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+        .sentra-text strong {
+            color: #9b6218;
+        }
+
+
+        /* =========================
+           CIRI-CIRI
+        ========================= */
+
+        .characteristics {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 13px;
+
+            margin-top: 15px;
+        }
+
+        .characteristic {
+            padding: 17px;
+
+            background: #faf5ff;
+
+            border-radius: 16px;
+        }
+
+        .characteristic h3 {
+            color: #9e2d6b;
+
+            font-size: 16px;
+
+            margin-bottom: 6px;
+        }
+
+        .characteristic p {
+            font-size: 14px;
+
+            text-align: left;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           MANFAAT
+        ========================= */
+
+        .benefit {
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 12px;
+
+            margin: 14px 0;
+
+            font-size: 15px;
+
+            line-height: 1.7;
+        }
+
+        .benefit-icon {
+            min-width: 32px;
+
+            height: 32px;
+
+            border-radius: 50%;
+
+            background: #b1337c;
+
+            color: white;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+
+
+        /* =========================
+           FAKTA MENARIK
+        ========================= */
+
+        .fact {
+            background:
+                linear-gradient(
+                    135deg,
+                    #5d133c,
+                    #a83f85,
+                    #cf6eb2
+                );
+
+            color: white;
+
+            border: none;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+        .fact h2 {
+            color: white;
+
+            margin-bottom: 13px;
+        }
+
+        .fact p {
+            text-align: center;
+
+            color: white;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           MUSIK
+        ========================= */
+
+        .music-box {
+            position: fixed;
+
+            right: 20px;
+
+            bottom: 20px;
+
+            z-index: 100;
+        }
+
+        .music-button {
+            border: none;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #913a74,
+                    #8e4aa8
+                );
+
+            color: white;
+
+            width: 58px;
+
+            height: 58px;
+
+            border-radius: 50%;
+
+            font-size: 23px;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 6px 18px rgba(0,0,0,0.25);
+
+            transition: 0.3s;
+        }
+
+        .music-button:hover {
+            transform: scale(1.1);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+
+            padding: 25px 15px;
+
+            color: #777;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           RESPONSIVE HP
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .header {
+                padding: 38px 18px 48px;
+            }
+
+            .header h1 {
+                font-size: 29px;
+            }
+
+            .fruit-icon {
+                font-size: 52px;
+            }
+
+            .fruit-image {
+                height: 230px;
+            }
+
+            .info-grid,
+            .distribution,
+            .characteristics {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 21px;
+
+                border-left-width: 4px;
+            }
+
+            .section h2 {
+                font-size: 21px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header class="header">
+
+        <div class="fruit-icon">
+            🍈
+        </div>
+
+        <h1>Jambu Biji</h1>
+
+        <p>
+            Mengenal lebih dekat buah tropis Indonesia
+        </p>
+
+    </header>
+
+
+
+    <main class="container">
+
+
+        <!-- =========================
+             GAMBAR
+        ========================= -->
+
+        <div class="fruit-card">
+
+            <!--
+                GANTI URL GAMBAR INI
+                DENGAN GAMBAR JAMBU BIJI
+                YANG KAMU GUNAKAN
+            -->
+
+            <img
+                class="fruit-image"
+                src="Jambu biji.jfif"
+                alt="Jambu Biji"
+            >
+
+        </div>
+
+
+
+        <!-- =========================
+             TENTANG JAMBU BIJI
+        ========================= -->
+
+        <section class="section">
+
+            <h2>🌿 Tentang Jambu Biji</h2>
+
+            <p>
+                Jambu biji merupakan salah satu buah tropis yang banyak ditemukan di Indonesia. Buah ini memiliki rasa manis dengan sedikit rasa asam dan daging buah yang dapat berwarna putih, merah muda, atau merah. Jambu biji memiliki nama ilmiah Psidium guajava L. dan termasuk dalam famili Myrtaceae.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             INFORMASI UMUM
+        ========================= -->
+
+        <section class="section">
+
+            <h2>🔎 Informasi Umum</h2>
+
+            <div class="info-grid">
+
+                <div class="info-box">
+
+                    <strong>Nama Lokal</strong>
+
+                    <span>
+                        Jambu Biji
+                    </span>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <strong>Nama Ilmiah</strong>
+
+                    <span>
+                        Psidium guajava L.
+                    </span>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <strong>Famili</strong>
+
+                    <span>
+                        Myrtaceae
+                    </span>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <strong>Warna Buah</strong>
+
+                    <span>
+                        Hijau dan berubah kekuningan ketika matang
+                    </span>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <strong>Daging Buah</strong>
+
+                    <span>
+                        Putih, merah muda, atau merah
+                    </span>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <strong>Bentuk Buah</strong>
+
+                    <span>
+                        Bulat hingga lonjong
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CIRI-CIRI
+        ========================= -->
+
+        <section class="section">
+
+            <h2>🍃 Ciri-Ciri Jambu Biji</h2>
+
+            <div class="characteristics">
+
+                <div class="characteristic">
+
+                    <h3>🍈 Bentuk</h3>
+
+                    <p>
+                        Buah berbentuk bulat atau lonjong dengan permukaan kulit yang relatif halus.
+                    </p>
+
+                </div>
+
+
+                <div class="characteristic">
+
+                    <h3>💜 Kulit</h3>
+
+                    <p>
+                        Kulit berwarna hijau dan dapat berubah menjadi kekuningan ketika buah matang.
+                    </p>
+
+                </div>
+
+
+                <div class="characteristic">
+
+                    <h3>🌿 Daun</h3>
+
+                    <p>
+                        Daunnya berbentuk oval, berwarna hijau, dan memiliki permukaan yang agak kasar.
+                    </p>
+
+                </div>
+
+
+                <div class="characteristic">
+
+                    <h3>🌳 Pohon</h3>
+
+                    <p>
+                        Pohon jambu biji dapat tumbuh sekitar 3 hingga 10 meter dengan batang yang cukup kuat dan bercabang.
+                    </p>
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             HABITAT
+        ========================= -->
+
+        <section class="section">
+
+            <h2>🌱 Habitat Jambu Biji</h2>
+
+            <div class="habitat-box">
+
+                <h3>🌿 Habitat Alami dan Budidaya</h3>
+
+                <p>
+                   Jambu biji merupakan tanaman yang dapat tumbuh dengan baik di daerah tropis dan subtropis. Tanaman ini menyukai tempat yang mendapatkan cukup sinar matahari, memiliki tanah yang subur, serta drainase yang baik.
+                </p>
+
+                <p style="margin-top: 12px;">
+                    Di Indonesia, jambu biji dapat ditemukan di pekarangan rumah, kebun, lahan pertanian, dan perkebunan.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PENYEBARAN INDONESIA
+        ========================= -->
+
+        <section class="section">
+
+            <h2>Penyebaran Jambu Biji di Indonesia</h2>
+
+            <p>
+                Jambu Biji tersebar di berbagai wilayah Indonesia,
+                terutama daerah yang memiliki kondisi iklim dan
+                lingkungan yang sesuai untuk pertumbuhan tanaman
+                manggis.
+            </p>
+
+
+            <div class="distribution">
+
+
+                <div class="region">
+
+                    <strong>Sumatera</strong>
+
+                    <span>
+                        Jambu biji dibudidayakan di berbagai wilayah Sumatera, termasuk Sumatera Utara dan Sumatera Barat.
+                    </span>
+
+                </div>
+
+
+                <div class="region">
+
+                    <strong>Jawa</strong>
+
+                    <span>
+                        Jawa merupakan salah satu wilayah yang banyak membudidayakan jambu biji, terutama di Jawa Barat, Jawa Tengah, dan Jawa Timur.
+                    </span>
+
+                </div>
+
+
+                <div class="region">
+
+                    <strong>Bali</strong>
+
+                    <span>
+                       Jambu biji juga dapat ditemukan dan dibudidayakan di beberapa wilayah Bali.
+                    </span>
+
+                </div>
+
+
+                <div class="region">
+
+                    <strong>Kalimantan dan Sulawesi</strong>
+
+                    <span>
+                        Tanaman jambu biji juga dapat tumbuh dan dibudidayakan di beberapa wilayah Kalimantan dan Sulawesi.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SENTRA BUDIDAYA
+        ========================= -->
+
+        <section class="section">
+
+            <h2>🚜 Sentra Budidaya Jambu Biji di Indonesia</h2>
+
+            <p>
+                Jambu Biji dibudidayakan di sejumlah daerah di
+                Indonesia. Beberapa wilayah dikenal sebagai
+                sentra produksi manggis karena memiliki kondisi
+                lingkungan dan kegiatan budidaya yang mendukung.
+            </p>
+
+
+            <div class="sentra">
+
+                <div class="sentra-icon">
+                    🌿
+                </div>
+
+                <div class="sentra-text">
+
+                    <strong>
+                        Jawa Barat
+                    </strong>
+
+                    <br>
+
+                    Beberapa daerah di Jawa Barat dikenal sebagai wilayah penghasil jambu biji, seperti Bogor dan Sukabumi.
+                </div>
+
+            </div>
+
+
+            <div class="sentra">
+
+                <div class="sentra-icon">
+                    🌿
+                </div>
+
+                <div class="sentra-text">
+
+                    <strong>
+                        Jawa Tengah
+                    </strong>
+
+                    <br>
+
+                    Jambu biji juga banyak dibudidayakan di beberapa wilayah Jawa Tengah, salah satunya Kabupaten Demak.
+
+                </div>
+
+            </div>
+
+
+            <div class="sentra">
+
+                <div class="sentra-icon">
+                    🌿
+                </div>
+
+                <div class="sentra-text">
+
+                    <strong>
+                        Jawa Timur
+                    </strong>
+
+                    <br>
+
+                    Beberapa wilayah seperti Malang dan sekitarnya juga memiliki budidaya jambu biji.
+
+                </div>
+
+            </div>
+
+
+            <div class="sentra">
+
+                <div class="sentra-icon">
+                    🌿
+                </div>
+
+                <div class="sentra-text">
+
+                    <strong>
+                        Wilayah lainnya
+                    </strong>
+
+                    <br>
+
+                   Jambu biji juga dibudidayakan di berbagai daerah di Sumatera, Bali, dan wilayah Indonesia lainnya.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             KANDUNGAN DAN MANFAAT
+        ========================= -->
+
+        <section class="section">
+
+            <h2>💜 Kandungan dan Manfaat</h2>
+
+
+            <div class="benefit">
+
+                <div class="benefit-icon">
+                    ✓
+                </div>
+
+                <div>
+                    Mengandung vitamin C yang cukup tinggi.
+                </div>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <div class="benefit-icon">
+                    ✓
+                </div>
+
+                <div>
+                   Mengandung serat, vitamin A, kalium, dan folat.
+                </div>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <div class="benefit-icon">
+                    ✓
+                </div>
+
+                <div>
+                    Mengandung antioksidan yang membantu melindungi sel tubuh dari kerusakan akibat radikal bebas.
+                </div>
+
+            </div>
+
+
+            <div class="benefit">
+
+
+                <div class="benefit-icon">
+                    ✓
+                 </div>
+
+                <div>
+                    Kandungan seratnya dapat membantu menjaga kesehatan pencernaan.
+                </div>
+        
+            </div>
+
+        </section>
+
+
+
+        </section>
+
+
+
+        <!-- =========================
+             FAKTA MENARIK
+        ========================= -->
+
+        <section class="section fact">
+
+            <h2>✨ Tahukah Kamu?</h2>
+
+            <p>
+                Jambu biji termasuk buah yang memiliki kandungan vitamin C cukup tinggi. Menariknya, jambu biji dengan daging buah berwarna merah maupun putih sama-sama memiliki kandungan gizi dan manfaat yang baik bagi tubuh.
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            ATPH SMKN 1 DUA KOTO 2026
+        </p>
+
+        <p>
+            © 2026 | ratihanjeliaguspamora
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         TOMBOL MUSIK
+    ========================= -->
+
+    <div class="music-box">
+
+        <button
+            class="music-button"
+            id="musicButton"
+            onclick="toggleMusic()"
+            title="Putar musik"
+        >
+            🎵
+        </button>
+
+        <audio
+            id="backgroundMusic"
+            loop
+        >
+
+            <source
+                src="ssstik.io_1790242004453.mp3"
+                type="audio/mpeg"
+            >
+
+        </audio>
+
+    </div>
+
+
+
+    <!-- =========================
+         JAVASCRIPT MUSIK
+    ========================= -->
+
+    <script>
+
+        const music =
+            document.getElementById(
+                "backgroundMusic"
+            );
+
+        const button =
+            document.getElementById(
+                "musicButton"
+            );
+
+
+        function toggleMusic() {
+
+            if (music.paused) {
+
+                music.play();
+
+                button.innerHTML = "🔊";
+
+            } else {
+
+                music.pause();
+
+                button.innerHTML = "🎵";
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+</html>
